@@ -23,15 +23,15 @@ tasks.named('test') {
 }
 
 dependencies {
-  annotationProcessor 'gov.nasa.jpl.aerie:merlin-framework-processor:' + project.aerieVersion
-  implementation 'gov.nasa.jpl.aerie:contrib:' + project.aerieVersion
-  implementation 'gov.nasa.jpl.aerie:merlin-framework:' + project.aerieVersion
-  implementation 'gov.nasa.jpl.aerie:merlin-sdk:' + project.aerieVersion
-  implementation 'gov.nasa.jpl.aerie:merlin-driver:' + project.aerieVersion
-  implementation 'gov.nasa.jpl.aerie:parsing-utilities:' + project.aerieVersion
-  implementation 'gov.nasa.jpl.aerie:type-utils:' + project.aerieVersion
+  annotationProcessor 'gov.nasa.ammos.plandev:merlin-framework-processor:' + project.plandevVersion
+  implementation 'gov.nasa.ammos.plandev:contrib:' + project.plandevVersion
+  implementation 'gov.nasa.ammos.plandev:merlin-framework:' + project.plandevVersion
+  implementation 'gov.nasa.ammos.plandev:merlin-sdk:' + project.plandevVersion
+  implementation 'gov.nasa.ammos.plandev:merlin-driver:' + project.plandevVersion
+  implementation 'gov.nasa.ammos.plandev:parsing-utilities:' + project.plandevVersion
+  implementation 'gov.nasa.ammos.plandev:type-utils:' + project.plandevVersion
 
-  testImplementation 'gov.nasa.jpl.aerie:merlin-framework-junit:' + project.aerieVersion
+  testImplementation 'gov.nasa.ammos.plandev:merlin-framework-junit:' + project.plandevVersion
   testImplementation 'org.junit.jupiter:junit-jupiter:+'
   testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
   testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

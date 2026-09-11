@@ -7,11 +7,8 @@ Included in this repo is all the basic infrastructure and scaffolding required t
 #### Interested in learning how to develop a model yourself?
 Check out the [PlanDev Mission Modeling Tutorial](https://nasa-ammos.github.io/plandev-docs/tutorials/mission-modeling/introduction/)
 
-#### Looking for some example models to play around with?
-Try out the following models:
-- [Simple Power Model](https://github.com/NASA-AMMOS/aerie-simple-model-power)
-- [Tutorial Model](https://github.com/NASA-AMMOS/aerie-modeling-tutorial)
-- Simple Data Model (coming soon)
+#### Looking for some models to play around with?
+Try out more example models in our [plandev-examples](https://github.com/NASA-AMMOS/plandev-examples) repository
 
 ## Prerequisites
 
@@ -62,7 +59,7 @@ cp scheduling/examples/SampleProcedure.java scheduling/src/main/java/scheduling/
 ```
 or
 ```sh
-cp constraints/examples/SampleActivityConstraint.java scheduling/src/main/java/scheduling/constraints
+cp constraints/examples/RecordingRateThreshold.java constraints/src/main/java/constraints/procedures
 ```
 
 (For more involved example procedures, take a look at some [scheduling procedures in the PlanDev repo](https://github.com/NASA-AMMOS/plandev/blob/develop/procedural/examples/foo-procedures/src/main/java/gov/nasa/ammos/plandev/procedural/examples/fooprocedures/procedures/StayWellFed.java) and [constraint procedures in the modeling tutorial]())

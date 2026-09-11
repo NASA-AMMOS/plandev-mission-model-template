@@ -1,4 +1,4 @@
-rootProject.name = 'aerie-template'
+rootProject.name = 'plandev-template'
 include('missionmodel')
 include('scheduling')
 include('constraints')
