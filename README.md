@@ -7,11 +7,8 @@ Included in this repo is all the basic infrastructure and scaffolding required t
 #### Interested in learning how to develop a model yourself?
 Check out the [PlanDev Mission Modeling Tutorial](https://nasa-ammos.github.io/plandev-docs/tutorials/mission-modeling/introduction/)
 
-#### Looking for some example models to play around with?
-Try out the following models:
-- [Simple Power Model](https://github.com/NASA-AMMOS/aerie-simple-model-power)
-- [Tutorial Model](https://github.com/NASA-AMMOS/aerie-modeling-tutorial)
-- Simple Data Model (coming soon)
+#### Looking for some models to play around with?
+Try out more example models in our [plandev-examples](https://github.com/NASA-AMMOS/plandev-examples) repository
 
 ## Prerequisites
 

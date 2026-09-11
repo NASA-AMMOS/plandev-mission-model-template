@@ -6,16 +6,16 @@ index 0000000..4e61911
 @@ -0,0 +1,45 @@
 +package missionmodel;
 +
-+import gov.nasa.jpl.aerie.contrib.metadata.Unit;
-+import gov.nasa.jpl.aerie.contrib.streamline.modeling.discrete.DiscreteEffects;
-+import gov.nasa.jpl.aerie.merlin.framework.annotations.ActivityType;
-+import gov.nasa.jpl.aerie.merlin.framework.annotations.Export.Parameter;
-+import gov.nasa.jpl.aerie.merlin.framework.annotations.Export.Validation;
++import gov.nasa.ammos.plandev.contrib.metadata.Unit;
++import gov.nasa.ammos.plandev.contrib.streamline.modeling.discrete.DiscreteEffects;
++import gov.nasa.ammos.plandev.merlin.framework.annotations.ActivityType;
++import gov.nasa.ammos.plandev.merlin.framework.annotations.Export.Parameter;
++import gov.nasa.ammos.plandev.merlin.framework.annotations.Export.Validation;
 +
 +
-+import gov.nasa.jpl.aerie.merlin.protocol.types.Duration;
++import gov.nasa.ammos.plandev.merlin.protocol.types.Duration;
 +
-+import static gov.nasa.jpl.aerie.merlin.framework.ModelActions.delay;
++import static gov.nasa.ammos.plandev.merlin.framework.ModelActions.delay;
 +
 +/* Example Activity Type Definition
 +   If this activity is moved over to main/java/missionmodel along with the DataModel class and the example model
@@ -57,18 +57,18 @@ index 0000000..b0df0d4
 @@ -0,0 +1,44 @@
 +package missionmodel;
 +
-+import gov.nasa.jpl.aerie.contrib.serialization.mappers.DoubleValueMapper;
-+import gov.nasa.jpl.aerie.contrib.streamline.core.MutableResource;
-+import gov.nasa.jpl.aerie.contrib.streamline.modeling.Registrar;
-+import gov.nasa.jpl.aerie.contrib.streamline.modeling.discrete.Discrete;
-+import gov.nasa.jpl.aerie.contrib.streamline.modeling.discrete.DiscreteEffects;
-+import gov.nasa.jpl.aerie.merlin.protocol.types.Duration;
++import gov.nasa.ammos.plandev.contrib.serialization.mappers.DoubleValueMapper;
++import gov.nasa.ammos.plandev.contrib.streamline.core.MutableResource;
++import gov.nasa.ammos.plandev.contrib.streamline.modeling.Registrar;
++import gov.nasa.ammos.plandev.contrib.streamline.modeling.discrete.Discrete;
++import gov.nasa.ammos.plandev.contrib.streamline.modeling.discrete.DiscreteEffects;
++import gov.nasa.ammos.plandev.merlin.protocol.types.Duration;
 +
-+import static gov.nasa.jpl.aerie.contrib.metadata.UnitRegistrar.withUnit;
-+import static gov.nasa.jpl.aerie.contrib.streamline.core.MutableResource.resource;
-+import static gov.nasa.jpl.aerie.contrib.streamline.core.Resources.currentValue;
-+import static gov.nasa.jpl.aerie.contrib.streamline.modeling.discrete.Discrete.discrete;
-+import static gov.nasa.jpl.aerie.merlin.framework.ModelActions.delay;
++import static gov.nasa.ammos.plandev.contrib.metadata.UnitRegistrar.withUnit;
++import static gov.nasa.ammos.plandev.contrib.streamline.core.MutableResource.resource;
++import static gov.nasa.ammos.plandev.contrib.streamline.core.Resources.currentValue;
++import static gov.nasa.ammos.plandev.contrib.streamline.modeling.discrete.Discrete.discrete;
++import static gov.nasa.ammos.plandev.merlin.framework.ModelActions.delay;
 +
 +/* Example Mission Model delegate class
 +   This class includes two resource declarations and a method that can be spawned via a daemon task
@@ -110,7 +110,7 @@ index d7eb103..e2b3da5 100644
 -  //public final DataModel dataModel;
 +  public final DataModel dataModel;
 
-   public Mission(final gov.nasa.jpl.aerie.merlin.framework.Registrar registrar, final Configuration config) {
+   public Mission(final gov.nasa.ammos.plandev.merlin.framework.Registrar registrar, final Configuration config) {
      this.errorRegistrar = new Registrar(registrar, Registrar.ErrorBehavior.Log);
 @@ -35,10 +35,10 @@ public final class Mission {
      // errorRegistrar.discrete("ExampleResource", ExampleResource, new DoubleValueMapper());
@@ -134,9 +134,9 @@ index 314ae30..f0d67da 100644
  @WithMappers(BasicValueMappers.class)
  @WithConfiguration(Configuration.class)
 -// @WithActivityType(ActivityType.class) // for new activity type
--// @WithMetadata(name = "unit", annotation = gov.nasa.jpl.aerie.contrib.metadata.Unit.class) // for unit support
+-// @WithMetadata(name = "unit", annotation = gov.nasa.ammos.plandev.contrib.metadata.Unit.class) // for unit support
 +@WithActivityType(CollectData.class) // for new activity type
-+@WithMetadata(name = "unit", annotation = gov.nasa.jpl.aerie.contrib.metadata.Unit.class) // for unit support
++@WithMetadata(name = "unit", annotation = gov.nasa.ammos.plandev.contrib.metadata.Unit.class) // for unit support
  package missionmodel;
 
- import gov.nasa.jpl.aerie.contrib.serialization.rulesets.BasicValueMappers;
+ import gov.nasa.ammos.plandev.contrib.serialization.rulesets.BasicValueMappers;

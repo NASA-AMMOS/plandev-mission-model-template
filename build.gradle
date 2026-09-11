@@ -8,7 +8,7 @@ subprojects {
     mavenCentral()
     maven {
       name = "GitHubPackages"
-      url = "https://maven.pkg.github.com/nasa-ammos/aerie"
+      url = "https://maven.pkg.github.com/nasa-ammos/plandev"
       credentials {
         username = env.GITHUB_USER.value
         password = env.GITHUB_TOKEN.value
@@ -24,9 +24,9 @@ task dumpGithubCreds {
   }
 }
 
-project.ext.set("aerieVersion", getAerieVersion())
+project.ext.set("plandevVersion", getPlandevVersion())
 
-def getAerieVersion() {
+def getPlandevVersion() {
   if (env.DOCKER_TAG.isPresent()) {
     return env.DOCKER_TAG.value.replace("v", "") // strip leading v
   }
