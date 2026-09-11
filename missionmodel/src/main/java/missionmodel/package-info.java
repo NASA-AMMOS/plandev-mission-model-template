@@ -1,8 +1,8 @@
 @MissionModel(model = Mission.class)
 @WithMappers(BasicValueMappers.class)
 @WithConfiguration(Configuration.class)
-@WithActivityType(CollectData.class) // for new activity type
-@WithMetadata(name = "unit", annotation = gov.nasa.ammos.plandev.contrib.metadata.Unit.class) // for unit support
+// @WithActivityType(ActivityType.class) // for new activity type
+// @WithMetadata(name = "unit", annotation = gov.nasa.ammos.plandev.contrib.metadata.Unit.class) // for unit support
 package missionmodel;
 
 import gov.nasa.ammos.plandev.contrib.serialization.rulesets.BasicValueMappers;
